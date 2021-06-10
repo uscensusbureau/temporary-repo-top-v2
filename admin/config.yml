@@ -1,0 +1,19 @@
+backend:
+  name: github
+  repo: uscensusbureau/the-opportunity-project
+  base_url: https://opportunity.census.gov
+  auth_endpoint: external/auth/github
+  preview_context: federalist/build
+  branch: main
+
+media_folder: img/uploads
+public_folder: /assets/img/uploads
+
+collections:
+  - label: Sprints
+    name: sprints
+    folder: "_sprints"
+    fields:
+      - {label: "Abbreviation", name: "short-name", widget: "hidden"}
+      - {label: "Order", name: "order", widget: "number"}
+      - {label: "Expand All Problem Statements", name: "expandAllProblemStatements", widet: "boolean"}
